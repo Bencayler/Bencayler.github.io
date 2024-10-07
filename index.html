@@ -276,4 +276,65 @@
   <!-- About Us Section -->
   <div id="about" class="content-section">
     <h3>About JetPack Inc.</h3>
-    <p>Welcome to JetPack Inc., the world leader in personal jetpack technology! Founded in 2020, our mission is to revolutionize personal transportation by bringing the future to you today. We
+    <p>Welcome to JetPack Inc., the world leader in personal jetpack technology! Founded in 2020, our mission is to revolutionize personal transportation by bringing the future to you today. We specialize in high-performance jetpacks designed for adventurers, innovators, and those who want to take travel to new heights—literally!</p>
+    
+    <p>At JetPack Inc., we’re committed to making the skies accessible for everyone. Our jetpacks are equipped with state-of-the-art safety features, eco-friendly fuel options, and intuitive controls for a smooth and exhilarating flight experience. Whether you're commuting to work or seeking thrill-packed weekends, JetPack Inc. ensures you can soar with confidence.</p>
+
+    <p>With cutting-edge research and development, we continue to push the boundaries of aviation technology. Our team of world-class engineers, designers, and pilots have one goal in mind: to make flying a daily reality for people all over the world.</p>
+
+    <p>Join us on our journey as we make the skies your playground!</p>
+  </div>
+
+  <!-- Login Page -->
+  <div id="login" class="login-container">
+    <h3>Login</h3>
+    <form action="/submit-login" method="post">
+      <label for="uname">Username:</label><br>
+      <input type="text" id="uname" name="username" required><br>
+
+      <label for="psw">Password:</label><br>
+      <input type="password" id="psw" name="password" required><br>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Contact Information Section -->
+  <div id="contact" class="content-section">
+    <h3>Contact Information</h3>
+    <p><strong>Name:</strong> Ben Cayler</p>
+    <p><strong>Email:</strong> <a href="mailto:bcayl001@odu.edu">bcayl001@odu.edu</a></p>
+    <p><strong>Phone:</strong> 420-555-6969</p>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+
+</body>
+</html>
